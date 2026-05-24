@@ -99,6 +99,14 @@
             The integration process includes authentication, payload processing, data transformation, error handling, and automatic record updates. For secure on-premise integrations, MID Server acts as a bridge between ServiceNow and internal systems.
         </p>
     </div>
+    <div class="question">
+        <h3>7.What happens if you use current.update() inside a business rule?</h3>
+        <p>
+            Technically, current.update() can be used in After Business Rules because the record is already inserted or updated in the database at that stage.
+        </p>
+        <p>
+            However, it is generally avoided because it may cause recursive execution and performance issues. In most cases, Before Business Rules are preferred since changes made to current are automatically saved without using current.update().
+        </p>
 
 </body>
 
