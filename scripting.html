@@ -40,11 +40,16 @@
     <h1>Scripting Interview Questions</h1>
 
     <div class="question">
-        <h3>1. What is ServiceNow?</h3>
+        <h3>1. When an Incident Priority is high, automatically set the assignemnt group to Network Team</h3>
 
         <p>
-            ServiceNow is a cloud-based enterprise platform used to automate and manage IT and business processes. It provides end-to-end solutions for ITSM, ITOM, HRSD, CSM, and SecOps through a single platform using workflows, integrations, and low-code development capabilities.
-
+             Table: Incident
+             When : Before Update
+             Condition : Priority = 1-High
+        </p>
+        <p>
+            Script: if(current.priority == 1){
+            current.assignment_group = 'Network Team';
         </p>
     </div>
 
