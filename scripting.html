@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Scripting Interview Questions</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:30px;
+            font-family:Arial;
+            background:#111827;
+            color:white;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:50px;
+        }
+
+        .question{
+            background:#1f2937;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:20px;
+        }
+
+        .question h3{
+            color:#60a5fa;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Scripting Interview Questions</h1>
+
+    <div class="question">
+        <h3>1. What is ServiceNow?</h3>
+
+        <p>
+            ServiceNow is a cloud-based enterprise platform used to automate and manage IT and business processes. It provides end-to-end solutions for ITSM, ITOM, HRSD, CSM, and SecOps through a single platform using workflows, integrations, and low-code development capabilities.
+
+        </p>
+    </div>
+
+    <div class="question">
+        <h3>2. What is CMDB?</h3>
+
+        <p>
+            CMDB stands for Configuration Management Database. It is the centralized database that contains information about all the significant assets used in an organisation IT Infrastructure and their relationships.
+        </p>
+    </div>
+
+    <div class="question">
+        <h3>3. Difference between Client Script and Business Rule?</h3>
+
+        <p>
+            Client Script runs on the browser side and is used for front-end form behavior, whereas Business Rule runs on the server side and is used for backend processing and database operations.
+        </p>
+       <p>
+           Real-Time Scenario Answer : 
+       </p>
+        <p>
+            For example, if we want to make Assignment Group mandatory when Priority is High, we use Client Script because it is a UI behavior.
+        </p>
+        <p>
+            If we want to automatically create a task, update another table, or trigger notifications after Incident creation, we use Business Rule because it requires server-side processing.
+        </p>
+    </div>
+
+        <div class="question">
+        <h3>4. How do you differentiate between incident and problem?</h3>
+
+        <p>
+            An Incident is an unplanned interruption to an IT Service or reduction in quality of an IT Service where as Problem is the underlying cause of one or more incidents.
+        </p>
+    </div>
+        <div class="question">
+        <h3>5. What is Business Rules?</h3>
+
+        <p>
+            Business Rules are Server-Side Scripts that execute when database operations occur and update related records.
+        </p>
+        <p>
+            They run at different stages like Before, After, Async& Display.
+        </p>
+    </div>
+    <div class="question">
+        <h3>6.How do you integrate Servicenow with other systems?</h3>
+        <p>
+            We integrate ServiceNow with external systems mainly using REST APIs, SOAP APIs, IntegrationHub, and MID Servers based on business requirements. In most real-time projects, REST API is preferred because it is lightweight, fast, and easy to maintain.
+        </p>
+        <p>
+            The integration process includes authentication, payload processing, data transformation, error handling, and automatic record updates. For secure on-premise integrations, MID Server acts as a bridge between ServiceNow and internal systems.
+        </p>
+    </div>
+    <div class="question">
+        <h3>7.What happens if you use current.update() inside a business rule?</h3>
+        <p>
+            Technically, current.update() can be used in After Business Rules because the record is already inserted or updated in the database at that stage.
+        </p>
+        <p>
+            However, it is generally avoided because it may cause recursive execution and performance issues. In most cases, Before Business Rules are preferred since changes made to current are automatically saved without using current.update().
+        </p>
+
+</body>
+
+</html>
